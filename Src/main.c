@@ -85,6 +85,8 @@ void refreshSensor(void const * argument);
 /* USER CODE END PFP */
 
 /* USER CODE BEGIN 0 */
+const int UART_REFRESH_TIME = 2000;
+
 char inboundRecive[2];
 uint8_t sensorStatus[8];
 uint8_t sensorAlarm[8];
@@ -465,7 +467,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
 	}
 	else if(strOpcode == 'S'){
 		if(sensornum == 1){
-			osTimerStart(uartSenderHandle,1000);
+			osTimerStart(uartSenderHandle,UART_REFRESH_TIME);
 		}
 		if(sensornum == 0){
 			osTimerStop(uartSenderHandle);

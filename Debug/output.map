@@ -4749,63 +4749,64 @@ LOAD e:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16
 .iplt           0x08003ffc        0x0
  .iplt          0x08003ffc        0x0 e:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
 
-.rodata         0x08003ffc       0x80
+.rodata         0x08003ffc       0x84
                 0x08003ffc                . = ALIGN (0x4)
  *(.rodata)
  .rodata        0x08003ffc        0x8 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o
- .rodata        0x08004004       0x14 Src/main.o
- .rodata        0x08004018       0x18 Src/system_stm32f4xx.o
-                0x08004018                AHBPrescTable
-                0x08004028                APBPrescTable
+ .rodata        0x08004004       0x18 Src/main.o
+                0x08004018                UART_REFRESH_TIME
+ .rodata        0x0800401c       0x18 Src/system_stm32f4xx.o
+                0x0800401c                AHBPrescTable
+                0x0800402c                APBPrescTable
  *(.rodata*)
  .rodata.str1.4
-                0x08004030        0x0 Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.o
+                0x08004034        0x0 Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.o
                                   0x1 (size before relaxing)
  .rodata.str1.4
-                0x08004030        0x5 Middlewares/Third_Party/FreeRTOS/Source/tasks.o
- *fill*         0x08004035        0x3 
+                0x08004034        0x5 Middlewares/Third_Party/FreeRTOS/Source/tasks.o
+ *fill*         0x08004039        0x3 
  .rodata.str1.4
-                0x08004038       0x10 Middlewares/Third_Party/FreeRTOS/Source/timers.o
+                0x0800403c       0x10 Middlewares/Third_Party/FreeRTOS/Source/timers.o
  .rodata.str1.4
-                0x08004048       0x18 Src/main.o
+                0x0800404c       0x18 Src/main.o
  .rodata.str1.4
-                0x08004060       0x1c Src/stm32f4xx_hal_msp.o
+                0x08004064       0x1c Src/stm32f4xx_hal_msp.o
                                  0x1b (size before relaxing)
-                0x0800407c                . = ALIGN (0x4)
+                0x08004080                . = ALIGN (0x4)
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x0800407c        0x8
-                0x0800407c                __exidx_start = .
+.ARM            0x08004080        0x8
+                0x08004080                __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x0800407c        0x8 e:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_udivmoddi4.o)
-                0x08004084                __exidx_end = .
+ .ARM.exidx     0x08004080        0x8 e:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_udivmoddi4.o)
+                0x08004088                __exidx_end = .
 
-.rel.dyn        0x08004084        0x0
- .rel.iplt      0x08004084        0x0 e:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+.rel.dyn        0x08004088        0x0
+ .rel.iplt      0x08004088        0x0 e:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
 
-.preinit_array  0x08004084        0x0
-                0x08004084                PROVIDE (__preinit_array_start, .)
+.preinit_array  0x08004088        0x0
+                0x08004088                PROVIDE (__preinit_array_start, .)
  *(.preinit_array*)
-                0x08004084                PROVIDE (__preinit_array_end, .)
+                0x08004088                PROVIDE (__preinit_array_end, .)
 
-.init_array     0x08004084        0x4
-                0x08004084                PROVIDE (__init_array_start, .)
+.init_array     0x08004088        0x4
+                0x08004088                PROVIDE (__init_array_start, .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x08004084        0x4 e:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
-                0x08004088                PROVIDE (__init_array_end, .)
+ .init_array    0x08004088        0x4 e:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+                0x0800408c                PROVIDE (__init_array_end, .)
 
-.fini_array     0x08004088        0x4
+.fini_array     0x0800408c        0x4
                 [!provide]                PROVIDE (__fini_array_start, .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x08004088        0x4 e:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+ .fini_array    0x0800408c        0x4 e:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
                 [!provide]                PROVIDE (__fini_array_end, .)
-                0x0800408c                _sidata = LOADADDR (.data)
+                0x08004090                _sidata = LOADADDR (.data)
 
-.data           0x20000000       0x14 load address 0x0800408c
+.data           0x20000000       0x14 load address 0x08004090
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                _sdata = .
  *(.data)
@@ -4820,12 +4821,12 @@ LOAD e:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16
  *(.data*)
                 0x20000014                . = ALIGN (0x4)
                 0x20000014                _edata = .
-                0x080040a0                _siccmram = LOADADDR (.ccmram)
+                0x080040a4                _siccmram = LOADADDR (.ccmram)
 
-.igot.plt       0x20000014        0x0 load address 0x080040a0
+.igot.plt       0x20000014        0x0 load address 0x080040a4
  .igot.plt      0x20000014        0x0 e:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
 
-.ccmram         0x10000000        0x0 load address 0x080040a0
+.ccmram         0x10000000        0x0 load address 0x080040a4
                 0x10000000                . = ALIGN (0x4)
                 0x10000000                _sccmram = .
  *(.ccmram)
@@ -4948,7 +4949,7 @@ LOAD e:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16
                 0x000005cb       0x22 e:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
 OUTPUT(F4.elf elf32-littlearm)
 
-.debug_info     0x00000000    0x1d8b9
+.debug_info     0x00000000    0x1d8cf
  .debug_info    0x00000000     0x11d9 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
  .debug_info    0x000011d9     0x1755 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
  .debug_info    0x0000292e     0x127b Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o
@@ -4964,12 +4965,12 @@ OUTPUT(F4.elf elf32-littlearm)
  .debug_info    0x00014773     0x1872 Middlewares/Third_Party/FreeRTOS/Source/timers.o
  .debug_info    0x00015fe5      0x532 Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o
  .debug_info    0x00016517      0xc71 Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o
- .debug_info    0x00017188     0x2291 Src/main.o
- .debug_info    0x00019419     0x14f4 Src/stm32f4xx_hal_msp.o
- .debug_info    0x0001a90d     0x13d2 Src/stm32f4xx_hal_timebase_TIM.o
- .debug_info    0x0001bcdf      0xe8f Src/stm32f4xx_it.o
- .debug_info    0x0001cb6e      0xd29 Src/system_stm32f4xx.o
- .debug_info    0x0001d897       0x22 startup/startup_stm32f407xx.o
+ .debug_info    0x00017188     0x22a7 Src/main.o
+ .debug_info    0x0001942f     0x14f4 Src/stm32f4xx_hal_msp.o
+ .debug_info    0x0001a923     0x13d2 Src/stm32f4xx_hal_timebase_TIM.o
+ .debug_info    0x0001bcf5      0xe8f Src/stm32f4xx_it.o
+ .debug_info    0x0001cb84      0xd29 Src/system_stm32f4xx.o
+ .debug_info    0x0001d8ad       0x22 startup/startup_stm32f407xx.o
 
 .debug_abbrev   0x00000000     0x3a66
  .debug_abbrev  0x00000000      0x2e5 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
@@ -5212,7 +5213,7 @@ OUTPUT(F4.elf elf32-littlearm)
  .debug_line    0x0000c772      0x7a4 Src/system_stm32f4xx.o
  .debug_line    0x0000cf16       0x7f startup/startup_stm32f407xx.o
 
-.debug_str      0x00000000    0xcc46e
+.debug_str      0x00000000    0xcc480
  .debug_str     0x00000000    0xc141d Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
                               0xc1802 (size before relaxing)
  .debug_str     0x000c141d      0x39e Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
@@ -5243,17 +5244,17 @@ OUTPUT(F4.elf elf32-littlearm)
                                0x8671 (size before relaxing)
  .debug_str     0x000cbf10      0x23a Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o
                                0xae0d (size before relaxing)
- .debug_str     0x000cc14a      0x1b5 Src/main.o
-                              0xc6f8c (size before relaxing)
- .debug_str     0x000cc2ff       0x1b Src/stm32f4xx_hal_msp.o
+ .debug_str     0x000cc14a      0x1c7 Src/main.o
+                              0xc6f9e (size before relaxing)
+ .debug_str     0x000cc311       0x1b Src/stm32f4xx_hal_msp.o
                               0xc162d (size before relaxing)
- .debug_str     0x000cc31a       0x61 Src/stm32f4xx_hal_timebase_TIM.o
+ .debug_str     0x000cc32c       0x61 Src/stm32f4xx_hal_timebase_TIM.o
                               0xc1684 (size before relaxing)
- .debug_str     0x000cc37b       0x69 Src/stm32f4xx_it.o
+ .debug_str     0x000cc38d       0x69 Src/stm32f4xx_it.o
                               0xc622a (size before relaxing)
- .debug_str     0x000cc3e4       0x5a Src/system_stm32f4xx.o
+ .debug_str     0x000cc3f6       0x5a Src/system_stm32f4xx.o
                               0xc0c93 (size before relaxing)
- .debug_str     0x000cc43e       0x30 startup/startup_stm32f407xx.o
+ .debug_str     0x000cc450       0x30 startup/startup_stm32f407xx.o
                                  0x51 (size before relaxing)
 
 .comment        0x00000000       0x7e
