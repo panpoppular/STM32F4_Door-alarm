@@ -85,7 +85,7 @@ void refreshSensor(void const * argument);
 /* USER CODE END PFP */
 
 /* USER CODE BEGIN 0 */
-const int UART_REFRESH_TIME = 2000;
+const int UART_REFRESH_TIME = 750;
 
 char inboundRecive[2];
 uint8_t sensorStatus[8];
@@ -496,6 +496,7 @@ void senderCallback(void const * argument)
 {
   /* USER CODE BEGIN senderCallback */
 	HAL_UART_Transmit(&huart2,sensorStatus,8,5);
+	HAL_GPIO_TogglePin(GPIOD,LD5_Pin);
   /* USER CODE END senderCallback */
 }
 
